@@ -10,64 +10,64 @@ struct TwoStacks{
     char arr[MAX];
     int top1;
     int top2;
-}ts;
+}s;
 
 // Initialise top1 and top2 here
 void init(){
-ts.top1=-1;
-ts.top2=MAX;
+    s.top1=-1;
+    s.top2=MAX;
+
 }
 
 // Write the code to push the data in Stack 1
 void push1(int data){
-if(ts.top1<ts.top2-1){
-    ts.arr[++(ts.top1)] = data;
-    
+if(s.top1<s.top2-1){
+    s.arr[++(s.top1)] = data;
+
 }
 else{
-   printf("\n Stack overflow\n");
+   printf("stack overflow");
     exit(1);
 }
 }
 
 // Write the code to push the data in Stack 2
 void push2(int data){
-if(ts.top1<ts.top2-1){
-    (ts.top2)--;
-    ts.arr[ts.top2]=data;
+if(s.top1<s.top2-1){
+    (s.top2)--;
+    s.arr[s.top2]=data;
 }
 else{
-     printf("\n Stack overflow\n");
+     printf("stack overflow");
     exit(1);
 }
 }
 
 // Write the code to pop the data from Stack 1
-int pop1(){
-if(ts.top1>=0){
-    int x=ts.arr[ts.top1];
-    (ts.top1)--;
+   int pop1(){
+if(s.top1>=0){
+    int x=s.arr[s.top1];
+    (s.top1)--;
     return x;
 }
 else {
-        printf("\nStack UnderFlow\n");
+        printf("stack underflow");
         exit(1);
     }
 }
 
 // Write the code to pop the data from Stack 2
 int pop2(){
-if(ts.top2<MAX){
-    int y=ts.arr[ts.top2];
-    (ts.top2)++;
+if(s.top2<MAX){
+    int y=s.arr[s.top2];
+    (s.top2)++;
     return y;
 }
 else {
-        printf("\nStack UnderFlow\n");
+        printf("stack underflow\n");
         exit(1);
     }
 }
-
 // Driver Code
 int main() {
 
@@ -81,7 +81,7 @@ int main() {
         printf(" 1. Push in Stack 1 \n 2. Push in Stack 2 \n 3. Pop from Stack 1 \n 4. Pop from Stack 2 \n");
         scanf("%d", &opt);
 
-         switch (opt)
+        switch (opt)
         {
             case 1:
                 printf(">> Enter the element you want to push in Stack 1: \n");
