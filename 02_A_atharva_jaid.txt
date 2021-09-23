@@ -1,0 +1,97 @@
+#include<stdio.h>
+struct bank
+{
+     int acc_no;
+     char name[20];
+     int bal;
+}b[3];
+void check(struct bank b[],int n)
+{
+     int i;
+     printf("\nCustomer Details whose Balance < 100 Rs. \n");
+     printf("----------------------------------------------\n");
+     for(i=0;i<n;i++)
+     {
+          if(b[i].bal<100)
+          {
+               printf("Account Number : %d\n",b[i].acc_no);
+               printf("Name           : %s\n",b[i].name);
+               printf("Balance        : %d\n",b[i].bal);
+               printf("------------------------------\n");
+          }
+     }
+}
+int main()
+{
+     int i,choice,n,a,bal;
+     for(i=0;i<10;i++)
+     {
+          printf("Enter Details of Customer %d\n",i+1);
+          printf("------------------------------\n");
+          printf("Enter Account Number : ");
+          scanf("%d",&b[i].acc_no);
+          printf("Enter Name           : ");
+          scanf("%s",b[i].name);
+          printf("Enter Balance        : ");
+          scanf("%d",&b[i].bal);
+          printf("------------------------------\n");
+     }
+
+     check(b,10);
+
+    printf("Press 1 to withdraw\n");
+	printf("Press 2 to deposit\n");
+	printf("Press 3 exit\n");
+	printf("Enter your choice:\n");
+    scanf("%d",&choice);
+	switch (choice)
+	{
+	case 1:
+	    {
+	        printf("Enter account no : ");
+	        scanf("%d",&n);
+	        if(n==b[n-1].acc_no)
+            {
+               printf("Account Number : %d\n",b[n-1].acc_no);
+               printf("Name           : %s\n",b[n-1].name);
+               printf("Balance        : %d\n",b[n-1].bal);
+               printf("Amount to be withdrawed : ");
+               scanf("%d",&a);
+               if(a>b[n-1].bal)
+               {
+                   printf("The balance is insufficient for the specified withdrawal");
+               }
+               else
+               {
+                bal=(b[n-1].bal - a);
+               printf("New balance : %d \n",bal);
+            }
+            }
+            else
+            {
+             printf("Invalid acc no");
+            }
+            break;
+    case 2:
+        {
+           printf("Enter account no : ");
+	        scanf("%d",&n);
+	        if(n==b[n-1].acc_no)
+            {
+                printf("Account Number : %d\n",b[n-1].acc_no);
+               printf("Name           : %s\n",b[n-1].name);
+               printf("Balance        : %d\n",b[n-1].bal);
+               printf("Amount to be deposited : ");
+               scanf("%d",&a);
+               bal=(b[n-1].bal+a);
+               printf("New balance : %d \n",bal);
+            }
+        }
+               break;
+    case 3:
+            printf("EXIT");
+            break;
+     return 0;
+}
+     }
+}
