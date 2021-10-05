@@ -1,0 +1,80 @@
+App.js CODE
+
+
+import './App.css';
+import Home from './pages/home';
+
+function App() {
+return <Home/>;
+}
+
+export default App;
+
+
+
+
+-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X
+
+
+home.js CODE 
+
+
+import React from "react";
+
+class Home extends React.Component {
+    render() {
+        return (
+        <div>
+            <div class="loginbox">
+                <h1>LOGIN</h1>
+                <form>
+                    <p>Username</p>
+                    <input type="text" name="" placeholder="Enter Username"/>
+                    <p>Password</p>
+                    <input type="password" name="" placeholder="Enter Password"/>
+                    <input type="submit" name="" value="Login"/>
+                    <a href ="#">Lost your password?</a><br/>
+                    <a href ="#">Don't have an account?</a>
+                </form>
+            </div>
+        </div>
+        );
+    }
+}
+
+export default Home;
+
+
+
+
+-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-
+
+index.html CODE
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login Form Design</title>
+    <link rel="stylesheet" href="assets/style.css"><title>Login Form Design</title>
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
+
+
+
+-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-
