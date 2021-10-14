@@ -1,0 +1,127 @@
+#include<iostream>
+using namespace std;
+
+
+
+class personal_data
+{
+public:
+    string name;
+    string surname;
+    string address;
+    string mobile_no;
+    string dob;
+    void getdata1()
+    {
+        cout<<"Enter your name: "<<endl;
+        cin>>name;
+        cout<<"Enter your surname: "<<endl;
+        cin>>surname;
+        cout<<"Enter your address: "<<endl;
+        cin>>address;
+        cout<<"Enter your Mobile Number: "<<endl;
+        cin>>mobile_no;
+        cout<<"Enter your Date of Birth: "<<endl;
+        cin>>dob;
+    }
+    void display1()
+    {
+        cout<< "Name : " << name<<endl;
+        cout<< "Surname : " << surname<<endl;
+        cout<< "address : " << address<<endl;
+        cout<< "Contact NO. : " << mobile_no<<endl;
+        cout<< "Date of Birth : " << dob<<endl;
+    }
+
+};
+
+class professional_data: public personal_data
+{
+public:
+    string name_organization;
+    string job_profile;
+    string project;
+    void getdata2()
+    {
+        cout<<"Enter name of your organization: "<<endl;
+        cin>>name_organization;
+        cout<<"Enter your Job Profile: "<<endl;
+        cin>>job_profile;
+        cout<<"Enter your Project: "<<endl;
+        cin>>project;
+    }
+    void display2()
+    {
+        cout<< "Name of Org : " << name_organization<<endl;
+        cout<< "JOB PROFILE : " << job_profile<<endl;
+        cout<< "PROJECT : " << project<<endl;
+    }
+};
+class academic : public professional_data
+{
+public:
+    string college_name;
+    string branch;
+    int year;
+    double cgpa;
+    void getdata3()
+    {
+        cout<<"Enter name of your College: "<<endl;
+        cin>>college_name;
+        cout<<"Enter your Branch: "<<endl;
+        cin>>branch;
+        cout<<"Enter your Year of passing: "<<endl;
+        cin>>year;
+        cout<<"Enter your CGPA: "<<endl;
+        cin>>cgpa;
+    }
+    void display3()
+    {
+        cout<< "Name of College : " << college_name<<endl;
+        cout<< "Branch : " << branch<<endl;
+        cout<< "Year of Passing : " << year <<endl;
+        cout<< "CGPA : " << cgpa <<endl;
+    }
+};
+class biodata : public academic
+{
+
+};
+int main()
+{
+        biodata b;
+        int choice;
+        while(true)
+        {
+            cout<<"Enter your choice :\n1]Personal Data:\n2]professional data:\n3]Academic data:\n"<<endl;
+            cin>>choice;
+
+            switch(choice)
+            {
+                case 1 :
+                cout<<"<<<<<<<<   Personal data   >>>>>>>>"<<endl;
+                b.getdata1();
+                b.display1();
+                cout<<""<<endl;;
+                break;
+
+                case 2 :
+                cout<<"<<<<<<<<   Professional data   >>>>>>>>"<<endl;
+                b.getdata2();
+                b.display2();
+                cout<<""<<endl;
+                break;
+
+                case 3 :
+                cout<<"<<<<<<<<   Academic data   >>>>>>>>"<<endl;
+                b.getdata3();
+                b.display3();
+                cout<<""<<endl;
+                default:
+                cout<<"invalid choice"<<endl;
+                break;
+            }
+        }
+
+
+}
